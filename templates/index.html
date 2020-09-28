@@ -1,0 +1,25 @@
+
+
+
+{% block head %}
+
+<title>Calculator</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Calculator</h1>
+
+    <div class="form">
+        <form action="/math" method="POST">
+            <label for="operation">Choose a Mathematical Operation</label>
+
+
+            <input type="text" name="text" id="num1">
+
+            <input type="submit" value="Calculate">
+        </form>
+    </div>
+</div>
+{% endblock %}
